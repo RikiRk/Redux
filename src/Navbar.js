@@ -1,6 +1,8 @@
 import React from "react";
+import {useSelector} from "react-redux";
 
 function Navbar() {
+  const amount = useSelector(state => state.amount)
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -30,19 +32,12 @@ function Navbar() {
                 Link
               </a>
             </li>
-            
           </ul>
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
+          <div>
+            <button disabled={true} className="btn btn-primary">
+              Your balance: {amount}
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </nav>

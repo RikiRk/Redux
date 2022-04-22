@@ -1,8 +1,8 @@
 import {combineReducers} from "redux"
-import amountReducer from "./amountReducer";
+import AmountReducer from "./AmountReducer";
 
 const reducer = combineReducers({
-    amount : amountReducer
+    amount : AmountReducer
 })
 
 export default reducer;
